@@ -11,8 +11,8 @@
 	],
 	"activationEvents": [
 		"onCommand:start-plug.helloWorld",
-    "onCommand:invalid-code-remover.removeConsole",
-    "onCommand:invalid-code-remover.removeDebugger"
+		"onCommand:invalid-code-remover.removeConsole",
+		"onCommand:invalid-code-remover.removeDebugger"
 	],
 	"main": "./extension.js",
 	"contributes": {
@@ -21,31 +21,30 @@
 				"command": "start-plug.helloWorld",
 				"title": "Hello World"
 			},
-      {
+			{
 				"command": "invalid-code-remover.removeConsole",
 				"title": "removeConsole"
 			},
-      {
+			{
 				"command": "invalid-code-remover.removeDebugger",
 				"title": "removeDebugger"
 			}
 		],
-    "menus": {
-      "explorer/context": [
-        {
-          "command": "invalid-code-remover.removeConsole",
-          "when": "filesExplorerFocus",
-          "group": "navigation@1"
-        },
-        {
-          "command": "invalid-code-remover.removeDebugger",
-          "when": "filesExplorerFocus",
-          "group": "navigation@2"
-        }
-      ]
-    }
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "invalid-code-remover.removeConsole",
+					"when": "filesExplorerFocus",
+					"group": "navigation@1"
+				},
+				{
+					"command": "invalid-code-remover.removeDebugger",
+					"when": "filesExplorerFocus",
+					"group": "navigation@2"
+				}
+			]
+		}
 	},
-
 	"scripts": {
 		"lint": "eslint .",
 		"pretest": "npm run lint",
