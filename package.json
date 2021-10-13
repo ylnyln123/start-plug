@@ -10,9 +10,7 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:start-plug.helloWorld",
-		"onCommand:invalid-code-remover.removeConsole",
-		"onCommand:invalid-code-remover.removeDebugger"
+		"onStartupFinished"
 	],
 	"main": "./extension.js",
 	"contributes": {
@@ -22,25 +20,16 @@
 				"title": "Hello World"
 			},
 			{
-				"command": "invalid-code-remover.removeConsole",
-				"title": "removeConsole"
-			},
-			{
-				"command": "invalid-code-remover.removeDebugger",
-				"title": "removeDebugger"
+				"command": "custom-code.clear",
+				"title": "code-clear"
 			}
 		],
 		"menus": {
 			"explorer/context": [
 				{
-					"command": "invalid-code-remover.removeConsole",
+					"command": "custom-code.clear",
 					"when": "filesExplorerFocus",
 					"group": "navigation@1"
-				},
-				{
-					"command": "invalid-code-remover.removeDebugger",
-					"when": "filesExplorerFocus",
-					"group": "navigation@2"
 				}
 			]
 		}
