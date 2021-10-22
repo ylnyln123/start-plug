@@ -7,17 +7,14 @@ const FileHanding = require('./fileHanding')
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
+  console.log('context',context);
   //TODO : 在package.json中的activationEvents来定义插件被激活的条件 
   // 这一行代码只会在你的扩展被激活时执行一次  
-  console.log('Congratulations, your extension "start-plug" is now active!');
+  console.log('Congratulations, your extension "clear-custom-code" is now active!');
   vscode.window.showInformationMessage('插件已被激活');
   // 该命令已经在包中定义。 json文件  
   // 现在使用registerCommand提供命令的实现  
   // 参数必须与package.json中的command字段匹配  
-  let disposable = vscode.commands.registerCommand('start-plug.helloWorld', () => {
-    
-    
-  });
   let codeClear = vscode.commands.registerCommand('custom-code.clear', (params) => {
     vscode.window.showInputBox({
       password: false,
@@ -36,7 +33,7 @@ function activate(context) {
     })
   });
 
-  context.subscriptions.push(disposable, codeClear);
+  context.subscriptions.push(codeClear);
 }
 
 // 当您的扩展被停用时，将调用此方法  

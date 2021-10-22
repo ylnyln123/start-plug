@@ -1,6 +1,6 @@
-# start-plug README
+# clear-custom-code README
 
-This is the README for your extension "start-plug". After writing up a brief description, we recommend including the following sections.
+This is the README for your extension "clear-custom-code". After writing up a brief description, we recommend including the following sections.
 
 ## Features
 

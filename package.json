@@ -1,5 +1,5 @@
 {
-	"name": "start-plug",
+	"name": "clear-custom-code",
 	"displayName": "yln-plug",
 	"description": "private plug",
 	"version": "0.0.1",
@@ -16,11 +16,8 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "start-plug.helloWorld",
-				"title": "Hello World"
-			},
-			{
 				"command": "custom-code.clear",
+        "when": "isWindows",
 				"title": "code-clear"
 			}
 		],
@@ -28,11 +25,12 @@
 			"explorer/context": [
 				{
 					"command": "custom-code.clear",
-					"when": "filesExplorerFocus",
-					"group": "navigation@1"
+					"group": "navigation",
+          "when": "filesExplorerFocus"
 				}
 			]
 		}
+   
 	},
 	"scripts": {
 		"lint": "eslint .",

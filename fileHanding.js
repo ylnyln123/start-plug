@@ -14,7 +14,8 @@ function handleMain(path, options, msg){
       if (filePathList.length) {
         for (let index = 0; index < filePathList.length; index++) {
           const childPath = `${path}/${filePathList[index]}`;
-          handleMain(childPath,options, msg)
+          handleMain(childPath,options, msg);
+          resolve()
         }
       }else{
         reject('文件夹为空')
